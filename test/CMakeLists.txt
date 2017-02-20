@@ -1,0 +1,15 @@
+link_directories( /usr/local/lib )
+
+add_executable( test_sha1 test_sha1.c )
+add_executable( test_base58 test_base58.c )
+add_executable( test_base64 test_base64.c )
+add_executable( test_rsa test_rsa.c )
+add_executable( test_aes test_aes.c )
+add_executable( test_ssl test_ssl.c )
+
+target_link_libraries( test_sha1 pcrypto mbedtls mbedcrypto )
+target_link_libraries( test_base58 pcrypto mbedtls mbedcrypto )
+target_link_libraries( test_base64 pcrypto mbedtls mbedcrypto )
+target_link_libraries( test_rsa pcrypto mbedtls mbedcrypto )
+target_link_libraries( test_aes pcrypto mbedtls mbedcrypto )
+target_link_libraries( test_ssl pcrypto mbedtls mbedcrypto mbedx509 )
